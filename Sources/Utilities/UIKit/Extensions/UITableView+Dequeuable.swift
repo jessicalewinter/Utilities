@@ -9,16 +9,16 @@ import Foundation
 import UIKit
 
 extension UITableView: Dequeuable {
-    typealias CellType = UITableViewCell
+    public typealias CellType = UITableViewCell
     
-    func dequeueReusableCell<T: CellType>(for indexPath: IndexPath) -> T {
+    public func dequeueReusableCell<T: CellType>(for indexPath: IndexPath) -> T {
         guard let cell = self.dequeueReusableCell(withIdentifier: T.reuseIdentifier, for: indexPath) as? T else {
             fatalError("Trying to dequeue cell of different type from reuseIdentifier")
         }
         return cell
     }
         
-    func dequeueReusableCell<T: CellType>() -> T {
+   public func dequeueReusableCell<T: CellType>() -> T {
         guard let cell = self.dequeueReusableCell(withIdentifier: T.reuseIdentifier) as? T else {
             fatalError("Trying to dequeue cell of different type from reuseIdentifier")
         }

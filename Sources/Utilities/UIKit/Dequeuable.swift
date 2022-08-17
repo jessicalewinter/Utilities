@@ -1,6 +1,6 @@
 import Foundation
 
-protocol Dequeuable {
+public protocol Dequeuable {
     associatedtype CellType
     
     func dequeueReusableCell(for indexPath: IndexPath) -> CellType

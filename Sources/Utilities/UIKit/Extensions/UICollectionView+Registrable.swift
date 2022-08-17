@@ -2,9 +2,9 @@ import Foundation
 import UIKit
 
 extension UICollectionView: Registrable {
-    typealias CellType = UICollectionViewCell
+    public typealias CellType = UICollectionViewCell
     
-    func registerCell<Cell: UICollectionViewCell>(_ cellClass: Cell.Type) {
+    public func registerCell<Cell: UICollectionViewCell>(_ cellClass: Cell.Type) {
         register(cellClass, forCellWithReuseIdentifier: Cell.reuseIdentifier)
     }
 }
