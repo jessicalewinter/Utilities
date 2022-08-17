@@ -1,8 +1,10 @@
-//
-//  File.swift
-//  
-//
-//  Created by Jessica Lewinter on 17/08/22.
-//
-
 import Foundation
+import UIKit
+
+extension UICollectionView: Registrable {
+    typealias CellType = UICollectionViewCell
+    
+    func registerCell<Cell: UICollectionViewCell>(_ cellClass: Cell.Type) {
+        register(cellClass, forCellWithReuseIdentifier: Cell.reuseIdentifier)
+    }
+}

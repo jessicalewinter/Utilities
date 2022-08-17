@@ -19,7 +19,7 @@ extension UITableView: Dequeuable {
     }
         
     func dequeueReusableCell<T: CellType>() -> T {
-        guard let cell = self.dequeueReusableCell(withIdentifier: T.reuseIdentifier) else {
+        guard let cell = self.dequeueReusableCell(withIdentifier: T.reuseIdentifier) as? T else {
             fatalError("Trying to dequeue cell of different type from reuseIdentifier")
         }
         return cell
