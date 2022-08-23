@@ -3,15 +3,15 @@ import Foundation
 import UIKit
 
 public protocol ViewConfiguration: AnyObject {
-    func buildViewHierarchy()
+    func buildViews()
     func setupConstraints()
     func configureViews()
-    func buildLayout()
+    func setupLayout()
 }
 
 public extension ViewConfiguration {
-    func buildLayout() {
-        buildViewHierarchy()
+    func setupLayout() {
+        buildViews()
         setupConstraints()
         configureViews()
     }
