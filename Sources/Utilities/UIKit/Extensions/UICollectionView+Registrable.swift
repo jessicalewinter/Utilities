@@ -1,4 +1,5 @@
 import Foundation
+#if canImport(UIKit)
 import UIKit
 
 extension UICollectionView: Registrable {
@@ -8,3 +9,5 @@ extension UICollectionView: Registrable {
         register(cellClass, forCellWithReuseIdentifier: Cell.reuseIdentifier)
     }
 }
+
+#endif

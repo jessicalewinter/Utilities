@@ -1,11 +1,5 @@
-//
-//  File.swift
-//  
-//
-//  Created by Jessica Lewinter on 14/10/22.
-//
-
 import Foundation
+#if canImport(UIKit)
 import UIKit
 
 extension UIView {
@@ -18,3 +12,4 @@ extension UIView {
         ])
     }
 }
+#endif

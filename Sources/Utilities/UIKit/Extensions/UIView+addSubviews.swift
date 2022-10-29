@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public extension UIView {
@@ -5,3 +6,4 @@ public extension UIView {
         views.forEach { addSubview($0) }
     }
 }
+#endif

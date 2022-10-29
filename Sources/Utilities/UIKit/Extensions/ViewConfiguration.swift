@@ -1,7 +1,5 @@
 import Foundation
 
-import UIKit
-
 public protocol ViewConfiguration: AnyObject {
     func buildViews()
     func setupConstraints()

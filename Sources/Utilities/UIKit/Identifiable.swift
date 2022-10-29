@@ -1,5 +1,4 @@
 import Foundation
-import UIKit
 
 public protocol Identifiable {
     static var reuseIdentifier: String { get }
@@ -11,5 +10,10 @@ public extension Identifiable {
     }
 }
 
+#if canImport(UIKit)
+import UIKit
+
 extension UITableViewCell: Identifiable {}
 extension UICollectionViewCell: Identifiable {}
+
+#endif
