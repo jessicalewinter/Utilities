@@ -1,4 +1,5 @@
 import Foundation
+#if canImport(UIKit)
 import UIKit
 
 extension UICollectionView: Dequeuable {
@@ -10,3 +11,4 @@ extension UICollectionView: Dequeuable {
         return cell
     }
 }
+#endif

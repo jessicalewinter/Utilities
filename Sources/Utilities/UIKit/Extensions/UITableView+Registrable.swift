@@ -1,4 +1,5 @@
 import Foundation
+#if canImport(UIKit)
 import UIKit
 
 extension UITableView: Registrable {
@@ -6,3 +7,5 @@ extension UITableView: Registrable {
         register(cellClass, forCellReuseIdentifier: Cell.reuseIdentifier)
     }
 }
+
+#endif

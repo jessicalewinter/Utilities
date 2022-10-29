@@ -1,11 +1,5 @@
-//
-//  File.swift
-//  
-//
-//  Created by Jessica Lewinter on 17/08/22.
-//
-
 import Foundation
+#if canImport(UIKit)
 import UIKit
 
 extension UITableView: Dequeuable {
@@ -25,3 +19,4 @@ extension UITableView: Dequeuable {
         return cell
     }
 }
+#endif
